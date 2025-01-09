@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_employee_view_form_inherit_drd_school_management">
+            <field name="name">hr.employee.view.form.inherit.drd.school.management</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_ids']" position="before">
+                    <field name="role"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

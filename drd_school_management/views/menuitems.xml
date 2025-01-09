@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="class_action" model="ir.actions.act_window">
+            <field name="name">Class</field>
+            <field name="res_model">class.class</field>
+            <field name="view_mode">list,form</field>
+        </record>
+         <record id="student_action" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="res_model">res.student</field>
+            <field name="view_mode">list,form</field>
+        </record>
+          <record id="subject_action" model="ir.actions.act_window">
+            <field name="name">Subject</field>
+            <field name="res_model">res.subject</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Root Menu -->
+        <menuitem
+            id="school_management_menu"
+            name="School Management"
+            web_icon="drd_school_management,static/description/icon.png"
+            sequence="20"
+        />
+
+        <!-- Sub Menu -->
+        <menuitem
+            id="class_menu"
+            name="Class"
+            action="class_action"
+            parent="school_management_menu"
+            sequence="2"
+        />
+        <menuitem
+            id="res_student_menu"
+            name="Student"
+            action="student_action"
+            parent="school_management_menu"
+            sequence="3"
+        />
+         <menuitem
+            id="res_subject_menu"
+            name="Subject"
+            action="subject_action"
+            parent="school_management_menu"
+            sequence="4"
+        />
+            
+    </data>
+
+    
+</odoo>

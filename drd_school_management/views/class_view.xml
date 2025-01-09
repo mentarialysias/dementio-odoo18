@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="class_view_list" model="ir.ui.view">
+            <field name="name">class.view.list</field>
+            <field name="model">class.class</field>
+            <field name="arch" type="xml">
+                <list string="Class List View">
+                    <field name="name"/>
+                    <field name="total_student"/>
+                    <field name="is_active" widget="boolean_toggle"/>
+                    <field name="student_ids" widget="many2many_tags"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="class_view_form" model="ir.ui.view">
+            <field name="name">class.view.form</field>
+            <field name="model">class.class</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group string="General Setting">
+                            <group string="Name">
+                                <field name="name"/>
+                                <field name="is_active"/>
+                            </group>
+                            <group string="Total Student">
+                                <field name="total_student"/>
+                            </group>
+                        </group>
+                        <group string="Student List">
+                                <field name="student_ids"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    
+
+    </data>
+
+    
+</odoo>

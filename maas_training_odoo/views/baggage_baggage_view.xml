@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="baggage_baggage_view_list" model="ir.ui.view">
+            <field name="name">baggage.baggage.view.list</field>
+            <field name="model">baggage.baggage</field>
+            <field name="arch" type="xml">
+                <list string="Baggage List View">
+                    <field name="name"/>
+                    <field name="weight"/>
+                    <field name="schedule_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="baggage_baggage_view_form" model="ir.ui.view">
+            <field name="name">baggage.baggage.view.form</field>
+            <field name="model">baggage.baggage</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group string="Baggage Info">
+                            <group>
+                                <field name="name"/>
+                                <field name="schedule_id"/>
+                            </group>
+                            <group>
+                                <field name="weight"/>
+                            </group>
+                        </group>
+                       
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    
+
+    </data>
+
+    
+</odoo>

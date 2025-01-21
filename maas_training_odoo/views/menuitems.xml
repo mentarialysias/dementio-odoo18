@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="res_bus_action" model="ir.actions.act_window">
+            <field name="name">Bus Action</field>
+            <field name="res_model">res.bus</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        <record id="res_passenger_action" model="ir.actions.act_window">
+            <field name="name">Passenger</field>
+            <field name="res_model">res.passenger</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        <record id="bus_route_action" model="ir.actions.act_window">
+            <field name="name">Bus Route</field>
+            <field name="res_model">bus.route</field>
+            <field name="view_mode">list</field>
+        </record>
+         <record id="bus_schedule_action" model="ir.actions.act_window">
+            <field name="name">Bus Schedule</field>
+            <field name="res_model">bus.schedule</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        <record id="hr_employee_action" model="ir.actions.act_window">
+            <field name="name">Employee Menu</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+          
+
+        <!-- Root Menu -->
+        <menuitem
+            id="bus_management_menu"
+            name="Bus Management"
+            web_icon="maas_training_odoo,static/description/icon_bus.png"
+            sequence="20"
+        />
+
+        <!-- Sub Menu -->
+          <menuitem
+            id="passenger_menu"
+            name="Passenger"
+            action="res_passenger_action"
+            parent="bus_management_menu"
+            sequence="1"
+        />
+        <menuitem
+            id="res_bus_menu"
+            name="Bus"
+            action="res_bus_action"
+            parent="bus_management_menu"
+            sequence="3"
+        />
+        <menuitem
+            id="bus_schedule_menu"
+            name="Schedule"
+            action="bus_schedule_action"
+            parent="bus_management_menu"
+            sequence="2"
+        />
+
+        <menuitem
+            id="configuration_bus_management"
+            name="Configuration"
+            parent="bus_management_menu"
+            sequence="4"
+        />
+
+        <menuitem
+            id="bus_route_menu"
+            name="Route"
+            action="bus_route_action"
+            parent="configuration_bus_management"
+            sequence="1"
+        />
+
+
+        <!-- <menuitem
+            id="employee_management"
+            name="Employees"
+            parent="bus_management_menu"
+            sequence="5"
+        />
+
+        <menuitem
+            id="employess_menuitem"
+            name="Employees"
+            parent="employee_management"
+            sequence="1"
+        /> -->
+
+        <menuitem
+            id="hr_employee_menu"
+            name="Driver"
+            action="hr_employee_action"
+            parent="hr.menu_hr_employee_payroll"
+            sequence="1"
+        />
+
+        
+        
+            
+    </data>
+
+    
+</odoo>

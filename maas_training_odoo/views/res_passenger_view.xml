@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="res_passenger_view_list" model="ir.ui.view">
+            <field name="name">res.passenger.view.list</field>
+            <field name="model">res.passenger</field>
+            <field name="arch" type="xml">
+                <list string="Bus List View">
+                    <field name="name"/>
+                    <field name="weight"/>
+                    <field name="height"/>
+                    <field name="birth_date"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="res_passenger_view_form" model="ir.ui.view">
+            <field name="name">res.passenger.view.form</field>
+            <field name="model">res.passenger</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                    <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Passenger Name" />
+                            </h1>
+                        </div>
+                        <group string="Passenger Info">
+                            <group>
+                                <field name="name"/>
+                                <field name="weight"/>
+                            </group>
+                            <group>
+                                <field name="height"/>
+                                <field name="birth_date"/>
+                                <field name="age" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    
+
+    </data>
+
+    
+</odoo>

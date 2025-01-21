@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="bus_route_view_list" model="ir.ui.view">
+            <field name="name">bus.route.view.list</field>
+            <field name="model">bus.route</field>
+            <field name="arch" type="xml">
+                <list string="Bus Route List View">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- <record id="bus_route_view_form" model="ir.ui.view">
+            <field name="name">bus.route.view.form</field>
+            <field name="model">bus.route</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group string="General Info">
+                            <group string="Bus Route Name">
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+    
+
+    </data>
+
+    
+</odoo>
